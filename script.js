@@ -47,30 +47,11 @@ function playGame() {
             console.log("player choice error");
         }
     }
-    let computer = getComputerChoice();
-    let human = getHumanChoice();
-    playRound(computer, human);
-
-    computer = getComputerChoice();
-    human = getHumanChoice();
-    playRound(computer, human);
-
-    computer = getComputerChoice();
-    human = getHumanChoice();
-    playRound(computer, human);
-    
-    computer = getComputerChoice();
-    human = getHumanChoice();
-    playRound(computer, human);
-    
-    computer = getComputerChoice();
-    human = getHumanChoice();
-    playRound(computer, human);
-
-    console.log()
-    console.log()
-    console.log("humanScore: ", humanScore);
-    console.log("computerScore: ", computerScore);
+    while (humanScore !== 5 || computerScore !== 5) {
+        let computer = getComputerChoice();
+        let human = getHumanChoice();
+        playRound(computer, human);
+    }
 }
 
 playGame();
